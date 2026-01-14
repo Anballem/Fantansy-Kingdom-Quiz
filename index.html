@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fantansy Kingdom Quiz</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="bg-white p-8 rounded-xl shadow-md w-full max-w-lx">
+
+    <!-- Intro Section -->
+    <div id="intro">
+      <h1 class="text-3xl font-bold mb-4 text-center">Fantansy Kingdom Quiz</h1>
+      <p class="mb-6 text-center">
+        Answer 5 questions to discover which fantasy kingdom you belong to.</p>
+
+        <!--button section -->
+        <button onclick="startQuiz()" class="btn-primary w-full">
+          Start Quiz
+        </button>
+      </div>
+
+    <!-- Quiz Section -->
+     <div id="quiz" class="hidden">
+      <h2 id="question" class="text-xl font-semibold mb-4"></h2>
+      <div id="answers" class="space-y-2"></div>
+     </div>
+
+    <!-- Result Section -->
+     <div id="result" class="hidden text-center"> 
+<h2 class="text-2xl font-bold mb-4">Your Result</h2>
+<p id="resultText" class="text-lg"></p>
+<button onclick="restartQuiz()" class="btn-primary mt-6">Restart</button>
+</div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
