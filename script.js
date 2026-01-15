@@ -49,14 +49,22 @@ const questions= [
 let currentQuestion = 0;
 let scores= { fire: 0, water: 0, earth: 0, air: 0 };
 
-function startQuiz(){
-  
-  document.getElementById("intro").classList.add("hidden");
+function startQuiz(isRestart=false){
+  if(isRestart){
+    currentQuestion = 0;
+    scores= { fire: 0, water: 0, earth: 0, air: 0 };
+  }
+
+
+  else{document.getElementById("intro").classList.add("hidden");
 
   document.getElementById("quiz").classList.remove("hidden");
 
   showQuestion();
+
+  }
 }
+ 
 function showQuestion(){
   const q = questions[currentQuestion];
   document.getElementById("question").textContent = q.question;
@@ -104,8 +112,9 @@ function showResult(){
 function restartQuiz(){
   currentQuestion= 0;
   scores= { fire: 0, water: 0, earth: 0, air: 0 };
-  startQuiz();
+  startQuiz(true);
 
+  document.getElementById("quiz").classList.add("hidden");
 
 document.getElementById("result").classList.add("hidden");
 
