@@ -21,8 +21,8 @@ The quiz theme is “Which Fantasy Kingdom Do You Belong To?”, where answers a
 #Technologies Used
 . HTML5
 . CSS3
-. JavaScript (Vanilla JS)
-. Tailwind CSS (via CDN)
+. JavaScript 
+. Tailwind CSS 
 
 
 #How the Quiz Works
